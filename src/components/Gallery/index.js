@@ -5,8 +5,10 @@ import uniqart from "../../assets/content/uniqart.gif";
 import pos from "../../assets/content/pos.gif";
 import portfolio from "../../assets/content/portfolio.gif";
 import kitchen from "../../assets/content/kitchen.gif";
-import { BiLandscape } from "react-icons/bi";
-import { DiGitBranch } from "react-icons/di";
+// import { BiLandscape } from "react-icons/bi";
+// import { DiGitBranch } from "react-icons/di";
+import kitchenIq from "../../assets/content/kitchenIq.gif";
+import todo from "../../assets/content/todo.gif";
 
 function Gallery() {
   return (
@@ -58,6 +60,21 @@ function Gallery() {
           <img alt="Portfolio demo" src={portfolio} />
           <a href=" https://info-weld.vercel.app/">Visit </a>
         </div>
+
+        <div className="card">
+          <div className="cardTitle">Static Template</div>
+          <p className="subtitle">Html, CSS, JS, PHP, MYSQL</p>
+          <img alt="Portfolio demo" src={kitchenIq} />
+          <a href=" https://kitcheniq.quadbtech.com/">Visit </a>
+        </div>
+
+        <div className="card">
+          <div className="cardTitle">Todo App</div>
+          <p className="subtitle">React, Typescript, Localstorage, context State management, Dummy Login</p>
+          <img alt="Portfolio demo" src={todo} />
+          <a href=" https://to-do-app-diptanshug.vercel.app/">Visit </a>
+        </div>
+        
         <div className="card">
           <div className="cardTitle">Ongoing Project</div>
           <p className="subtitle">ReactJS</p>
