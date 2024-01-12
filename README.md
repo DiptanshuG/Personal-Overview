@@ -144,3 +144,21 @@ Designed and developed a dashboard that enables users to perform CRUD operations
 ### Static Single Page Website with PHP MySQL Form Submission
 
 Created a PHP-based static website with MySQL integration for form submissions, featuring data validation and storage.
+
+
+etc many more projects done yet.
+
+## Social Media and Collaboration
+
+### Instagram
+
+[![Codding Thing](https://img.shields.io/badge/Codding_Thing-Instagram-orange?style=for-the-badge&logo=instagram)](https://www.instagram.com/codding_thing/)
+
+Follow [Codding Thing](https://www.instagram.com/codding_thing/) on Instagram for coding updates, snippets, and more!
+
+### YouTube
+
+[![StudyFreeStudent](https://img.shields.io/badge/StudyFreeStudent-YouTube-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@StudyFreeStudent)
+
+Subscribe to [StudyFreeStudent](https://www.youtube.com/@StudyFreeStudent) on YouTube for collaborative content and educational videos.
+
