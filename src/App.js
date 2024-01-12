@@ -5,6 +5,8 @@ import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
+import './App.css';
+
 
 function App() {
 

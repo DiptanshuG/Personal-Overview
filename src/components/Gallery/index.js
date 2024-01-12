@@ -4,87 +4,114 @@ import admin from "../../assets/content/admin.gif";
 import uniqart from "../../assets/content/uniqart.gif";
 import pos from "../../assets/content/pos.gif";
 import portfolio from "../../assets/content/portfolio.gif";
-import kitchen from "../../assets/content/kitchen.gif";
-// import { BiLandscape } from "react-icons/bi";
-// import { DiGitBranch } from "react-icons/di";
 import kitchenIq from "../../assets/content/kitchenIq.gif";
 import todo from "../../assets/content/todo.gif";
+import kitchen from "../../assets/content/kitchen.gif";
+import imperialAssets from "../../assets/content/ImperialAssets.gif";
+import rentyourdress from "../../assets/content/rentyourdress.gif";
+import dukkaandarSeller from "../../assets/content/DukkaandarSeller.gif";
+import dexOrdi from "../../assets/content/DexOrdi.gif";
+
+const projects = [
+  {
+    title: "Customer-Online-Order",
+    technologies: "React.js, Tailwind, Node.js, postgre'sql",
+    image: CustomerOnlineOrderApp,
+    link: "https://heebee-customer-new.vercel.app/",
+  },
+  {
+    title: "Admin-Dashboard for management CRUD-Operation",
+    technologies: "React JS, Node.js, Bootstrap",
+    image: admin,
+    link: "https://admin.heebee.in/",
+  },
+  {
+    title: "A platform for buy and sell NFT's (Non-fungible token)",
+    technologies: "ReactJS, Bootstrap",
+    image: uniqart,
+    link: "https://demo.uniqart.io/",
+  },
+  {
+    title: "E-commerce Pos System",
+    technologies: "Express.js, PostgreSQL, ReactJs, Tailwind",
+    image: pos,
+    link: "https://heebee-pos.vercel.app",
+  },
+  {
+    title: "Portfolio Services",
+    technologies: "Html, CSS, JS, GSAP",
+    image: portfolio,
+    link: "https://info-weld.vercel.app/",
+  },
+  {
+    title: "Static Template",
+    technologies: "Html, CSS, JS, PHP, MYSQL",
+    image: kitchenIq,
+    link: "https://kitcheniq.quadbtech.com/",
+  },
+  {
+    title: "Todo App",
+    technologies:
+      "React, Typescript, Localstorage, context State management, Dummy Login",
+    image: todo,
+    link: "https://to-do-app-diptanshug.vercel.app/",
+  },
+  {
+    title: "kitchen Management of Restaurant",
+    technologies: "React, React bootstrap",
+    image: kitchen,
+    link: "https://to-do-app-diptanshug.vercel.app/",
+  },
+  {
+    title:
+      "Imperial Assets (building selling platforms based on blockchain bids type system)",
+    technologies: "Next JS, Tailwind D3",
+    image: imperialAssets,
+    link: "https://imperial-frontend.atican.dev/",
+  },
+  {
+    title: "Dress rental website static frontend theme",
+    technologies: "React, react-bootstrap",
+    image: rentyourdress,
+    link: "https://rent-your-dress.vercel.app/",
+  },
+  {
+    title:
+      "Dukkandaar seller module project (similar to meesho seller supplier )",
+    technologies: "React, react-bootstrap , typescript ",
+    image: dukkaandarSeller,
+    link: "https://seller.quadbtech.com/",
+  },
+  {
+    title: "Dexordi Project based on blockchain technology (in progress )",
+    technologies: "Next JS, Tailwind",
+    image: dexOrdi,
+    link: "https://dexordi-frontend.atican.dev/",
+  },
+];
+
+function ProjectCard({ title, technologies, image, link }) {
+  return (
+    <div className="card">
+      <div className="cardTitle">{title}</div>
+      <p className="subtitle">{technologies}</p>
+      <img alt={`${title} demo`} src={image} />
+      <a href={link}>Visit</a>
+    </div>
+  );
+}
 
 function Gallery() {
   return (
     <section className="my-5">
-      {/* <h1 id="gallery" className="intro">
-        <BiLandscape /> Gallery{" "}
-      </h1> */}
       <h1 id="gallery" className="intro">
         {" "}
         Live Projects{" "}
       </h1>
-
       <section className="flex-row">
-        <div className="card">
-          <div className="cardTitle">Customer-Online-Order</div>
-          <p className="subtitle">React.js, Tailwind,Nodejs, postgre'sql,</p>
-          <img alt="customer demo" src={CustomerOnlineOrderApp} />
-
-          <a href="https://heebee-customer-new.vercel.app/">Visit </a>
-        </div>
-
-        <div className="card">
-          <div className="cardTitle">
-            Admin-Dashboard for management CRUD-Operation
-          </div>
-          <p className="subtitle">React JS, Node.js,Bootstrap</p>
-          <img alt="admin demo" src={admin} />
-          <a href="https://admin.heebee.in/">Visit</a>
-        </div>
-
-        <div className="card">
-          <div className="cardTitle">
-            A platform for buy and sell NFT's (Non-fungible token)
-          </div>
-          <p className="subtitle">ReactJS, Bootstrap</p>
-          <img alt="uniqart demo" src={uniqart} />
-          <a href="https://demo.uniqart.io/">Visit</a>
-        </div>
-
-        <div className="card">
-          <div className="cardTitle">E-commerce Pos System</div>
-          <p className="subtitle">Express.js,postgresql, ReactJs,Tailwind</p>
-          <img alt="Pos demo" src={pos} />
-          <a href="https://heebee-pos.vercel.app">Visit </a>
-        </div>
-        <div className="card">
-          <div className="cardTitle">Portfolio Services</div>
-          <p className="subtitle">Html, CSS, JS, GSAP</p>
-          <img alt="Portfolio demo" src={portfolio} />
-          <a href=" https://info-weld.vercel.app/">Visit </a>
-        </div>
-
-        <div className="card">
-          <div className="cardTitle">Static Template</div>
-          <p className="subtitle">Html, CSS, JS, PHP, MYSQL</p>
-          <img alt="Portfolio demo" src={kitchenIq} />
-          <a href=" https://kitcheniq.quadbtech.com/">Visit </a>
-        </div>
-
-        <div className="card">
-          <div className="cardTitle">Todo App</div>
-          <p className="subtitle">React, Typescript, Localstorage, context State management, Dummy Login</p>
-          <img alt="Portfolio demo" src={todo} />
-          <a href=" https://to-do-app-diptanshug.vercel.app/">Visit </a>
-        </div>
-        
-        <div className="card">
-          <div className="cardTitle">Ongoing Project</div>
-          <p className="subtitle">ReactJS</p>
-          <img alt="kitchen demo" src={kitchen} />
-        </div>
-
-        <div className="card">
-          <h5>Yay! You have seen it all.</h5>
-          <h4>Update soon...</h4>
-        </div>
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
       </section>
     </section>
   );

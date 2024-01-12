@@ -25,7 +25,7 @@ function Footer() {
                     <br />
                     <a href="tel:758.297.4834"><FaMobileAlt /> Phone</a>
                     <br />
-                    <a href="https://docs.google.com/document/d/1uKJ9n5GcLHstYkR_jxnD9oKyIVf6rL4KA9u8LeLWCm4/edit" target={'_blank'} rel="noreferrer"><FiDownload /> Resume</a>
+                    <a href="https://flowcv.com/resume/tqh16tr3cm" target={'_blank'} rel="noreferrer"><FiDownload /> Resume</a>
                 </div>
                 <div className='card'>
                     <div className='cardTitle'><FaGithub /> GitHub</div>

@@ -5,9 +5,16 @@ import { FaHome } from "react-icons/fa";
 import { FiMoon } from "react-icons/fi";
 import { FiSun } from "react-icons/fi";
 import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Collapse, Nav, NavItem, Navbar, NavbarToggler } from "reactstrap";
 
-function Nav() {
+function Co() {
   //   const [theme, setThemeL] = useState("dark");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
 
   const [changeLight, setChangeLight] = useState(false);
 
@@ -16,49 +23,52 @@ function Nav() {
 
     document.querySelector("body").classList.toggle("Light");
   };
+
+  console.log({ isOpen });
   return (
     <header>
-      <nav className="navbar">
-        <ul className="flex-row">
-          <li className="mx-2">
-            <Link to="/" title="home" aria-label="home">
-              <span>
-                <img
-                  aria-label="favicon"
-                  alt="favicon"
-                  src={favicon}
-                  style={{ width: "12.25rem" }}
-                ></img>
-                <h2 style={{ fontSize: "2.25rem", marginRight: "3rem" }}>
-                  &nbsp;&nbsp;Diptanshu Bhawsar
-                </h2>
-              </span>
-            </Link>
-          </li>
-          <li className="mx-2">
-            <Link to="/">
-              <FaHome></FaHome>
-            </Link>
-          </li>
-          <li className="mx-2">
-            <Link to="/gallery">Gallery</Link>
-          </li>
-          <li className="mx-2">
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li className="mx-2">
-            <a href="#footer">More</a>
-          </li>
-          <li
-            className="mx-2 "
-            onClick={() => {
-              lightModeSwitch();
-            }}
-          >
-            {changeLight ? <FiSun size={25} /> : <FiMoon size={25} />}
-          </li>
+      {!isOpen && (
+        <nav className="navbar">
+          <ul className="flex-row">
+            <li className="mx-2">
+              <Link to="/" title="home" aria-label="home">
+                <span>
+                  <img
+                    aria-label="favicon"
+                    alt="favicon"
+                    src={favicon}
+                    style={{ width: "12.25rem" }}
+                  ></img>
+                  <h2 style={{ fontSize: "2.25rem", marginRight: "3rem" }}>
+                    &nbsp;&nbsp;Diptanshu Bhawsar
+                  </h2>
+                </span>
+              </Link>
+            </li>
+            <li className="mx-2">
+              <Link to="/">
+                <FaHome></FaHome>
+              </Link>
+            </li>
+            <li className="mx-2">
+              <Link to="/gallery">Gallery</Link>
+            </li>
+            <li className="mx-2">
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li className="mx-2">
+              <a href="#footer">More</a>
+            </li>
+            <li
+              className="mx-2 "
+              onClick={() => {
+                lightModeSwitch();
+              }}
+            >
+              {changeLight ? <FiSun size={25} /> : <FiMoon size={25} />}
+            </li>
 
-          {/* <li
+            {/* <li
             className="p-2 cursor-pointer relative border-radius-5"
             style={{
               color: "var(--primaryDarkColor)",
@@ -80,10 +90,11 @@ function Nav() {
               />
             )}
           </li> */}
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
 
-export default Nav;
+export default Co;
