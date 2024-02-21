@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import coverImage from "../../assets/cover/Diptanshu's img.jpeg";
 import { MdOutlineWavingHand } from "react-icons/md";
 import { GoFlame } from "react-icons/go";
+import { FiDownload } from "react-icons/fi";
+import ReactGA from 'react-ga';
+
 
 function Home() {
+  const socialLinks = {
+    resume: "https://flowcv.com/resume/tqh16tr3cm",
+  };
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <section className="my-5">
       <h1 id="about" className="intro">
@@ -20,6 +31,14 @@ function Home() {
           {" "}
           Hello! <MdOutlineWavingHand />{" "}
         </p>
+        <a
+          href={socialLinks.resume}
+          target="_blank"
+          rel="noreferrer"
+          className="resume-link"
+        >
+          <FiDownload /> Resume
+        </a>
       </div>
 
       <p>

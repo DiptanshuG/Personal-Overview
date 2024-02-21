@@ -5,11 +5,9 @@ import { FaHome } from "react-icons/fa";
 import { FiMoon } from "react-icons/fi";
 import { FiSun } from "react-icons/fi";
 import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { Collapse, Nav, NavItem, Navbar, NavbarToggler } from "reactstrap";
+
 
 function Co() {
-  //   const [theme, setThemeL] = useState("dark");
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -24,7 +22,6 @@ function Co() {
     document.querySelector("body").classList.toggle("Light");
   };
 
-  console.log({ isOpen });
   return (
     <header>
       {!isOpen && (

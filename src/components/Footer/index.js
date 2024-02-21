@@ -1,40 +1,61 @@
-import React from 'react';
-import github from '../../assets/cover/github.jpeg';
-import linkedin from '../../assets/cover/linkedin.jpeg';
-import { FaMobileAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { FiMail, FiDownload } from 'react-icons/fi';
-import { IoMdShare } from 'react-icons/io';
+import React from "react";
+import { Row, Col, Card } from "react-bootstrap";
+import github from "../../assets/cover/github.jpeg";
+import linkedin from "../../assets/cover/linkedin.jpeg";
+import { FaMobileAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiMail, FiDownload } from "react-icons/fi";
+import { IoMdShare } from "react-icons/io";
+import "../../assets/styles/Footer.css";
+
+const socialLinks = {
+  linkedin: "https://www.linkedin.com/in/diptanshu-bhawsar-503b201aa/",
+  github: "https://github.com/diptanshug",
+  email: "mailto:diptanshubhawsar50@gmail.com",
+  phone: "tel:758.297.4834",
+  // resume: "https://flowcv.com/resume/tqh16tr3cm",
+};
+
+function SocialCard({ icon, title, link, image }) {
+  return (
+    <Col md={2} xs={12} className="mb-4">
+      <Card>
+        <Card.Header className="cardTitle">
+          {icon} {title}
+        </Card.Header>
+        <a href={link} target="_blank" rel="noreferrer">
+          {image && (
+            <Card.Img src={image} alt={`${title} profile screenshot`} />
+          )}
+        </a>
+      </Card>
+    </Col>
+  );
+}
 
 function Footer() {
-    return (
-        <section className='my-5'>
-            <h1 id='footer' className='intro'><IoMdShare /> Socials & More</h1>
+  return (
+    <section className="my-5">
+      <h1 id="footer" className="intro">
+        <IoMdShare /> Socials & More
+      </h1>
 
-            <section className='flex-column center'>
-                <div className='card'>
-                    <div className='cardTitle'>
-                        <FaLinkedin /> LinkedIn
-                    </div>
+      <Row className="flex-column center">
+        <SocialCard
+          icon={<FaLinkedin />}
+          title="LinkedIn"
+          link={socialLinks.linkedin}
+          image={linkedin}
+        />
 
-                    <a href='https://www.linkedin.com/in/diptanshu-bhawsar-503b201aa/' target={'_blank'} rel="noreferrer">
-                        <img className='screenshot' alt='LinkedIn profile screenshot' src={linkedin}></img></a>
-                </div>
-
-                <div className='card'>
-                    <a href="mailto://diptanshubhawsar50@gmail.com"><FiMail /> Email</a>
-                    <br />
-                    <a href="tel:758.297.4834"><FaMobileAlt /> Phone</a>
-                    <br />
-                    <a href="https://flowcv.com/resume/tqh16tr3cm" target={'_blank'} rel="noreferrer"><FiDownload /> Resume</a>
-                </div>
-                <div className='card'>
-                    <div className='cardTitle'><FaGithub /> GitHub</div>
-                    <a href='https://github.com/diptanshug' target={'_blank'} rel="noreferrer"><img className='screenshot' alt='GitHub profile screenshot' src={github}></img></a>
-                </div>
-            </section>
-            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-        </section>
-    )
+        <SocialCard
+          icon={<FaGithub />}
+          title="GitHub"
+          link={socialLinks.github}
+          image={github}
+        />
+      </Row>
+    </section>
+  );
 }
 
 export default Footer;

@@ -6,6 +6,10 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import './App.css';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('YOUR_GA_MEASUREMENT_ID');
+
 
 
 function App() {

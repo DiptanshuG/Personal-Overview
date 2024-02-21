@@ -11,6 +11,8 @@ import imperialAssets from "../../assets/content/ImperialAssets.gif";
 import rentyourdress from "../../assets/content/rentyourdress.gif";
 import dukkaandarSeller from "../../assets/content/DukkaandarSeller.gif";
 import dexOrdi from "../../assets/content/DexOrdi.gif";
+import { Row, Col, Card, Button } from "react-bootstrap";
+
 
 const projects = [
   {
@@ -92,12 +94,18 @@ const projects = [
 
 function ProjectCard({ title, technologies, image, link }) {
   return (
-    <div className="card">
-      <div className="cardTitle">{title}</div>
-      <p className="subtitle">{technologies}</p>
-      <img alt={`${title} demo`} src={image} />
-      <a href={link}>Visit</a>
-    </div>
+    <Col md={4} sm={6} xs={12}>
+      <Card>
+        <Card.Img variant="top" src={image} alt={`${title} demo`} />
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{technologies}</Card.Text>
+          <Button href={link} variant="primary">
+            Visit
+          </Button>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 }
 
@@ -105,7 +113,6 @@ function Gallery() {
   return (
     <section className="my-5">
       <h1 id="gallery" className="intro">
-        {" "}
         Live Projects{" "}
       </h1>
       <section className="flex-row">
